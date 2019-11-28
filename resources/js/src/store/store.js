@@ -20,6 +20,7 @@ Vue.use(Vuex);
 //Module
 import users from './modules/user'
 import about from './modules/about'
+import corporation from './modules/corporation'
 export default new Vuex.Store({
     getters,
     mutations,
@@ -28,5 +29,6 @@ export default new Vuex.Store({
     modules: {
         users,
         about,
+        corporation,
     }
 })
