@@ -3926,10 +3926,6 @@ var render = function() {
             attrs: { color: _vm.navbarColor }
           },
           [
-            _vm.windowWidth >= 992
-              ? _c("bookmarks", { attrs: { navbarColor: _vm.navbarColor } })
-              : _vm._e(),
-            _vm._v(" "),
             _c(
               "router-link",
               {
@@ -3948,11 +3944,7 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("search-bar"),
-            _vm._v(" "),
-            _c("notification-drop-down"),
-            _vm._v(" "),
-            _c("profile-drop-down")
+            _c("search-bar")
           ],
           1
         )
@@ -4013,11 +4005,7 @@ var render = function() {
             _vm._v(" "),
             _c("vs-spacer"),
             _vm._v(" "),
-            _c("search-bar"),
-            _vm._v(" "),
-            _c("notification-drop-down"),
-            _vm._v(" "),
-            _c("profile-drop-down")
+            _c("search-bar")
           ],
           1
         )

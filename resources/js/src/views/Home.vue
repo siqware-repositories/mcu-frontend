@@ -1,119 +1,270 @@
 <template>
-	<div>
-		<demo></demo>
-		<tinymce id="d2" v-model="data" :other_options="options"></tinymce>
-		<div class="flex btn-group">
-			<vs-button @click="is_popup=true" type="relief" icon-pack="feather" icon="icon-plus-square">បន្ថែម</vs-button>
-			<vs-button @click="is_popup_edit=true" color="warning" type="relief" icon-pack="feather" icon="icon-edit">កែប្រែ</vs-button>
-			<vs-button type="relief" icon-pack="feather" icon="icon-package">អាប់គ្រេដ</vs-button>
-			<vs-button color="danger" type="relief" icon-pack="feather" icon="icon-trash-2">លុប</vs-button>
-			<add-home :is_popup="is_popup" @update-is_popup="syncPopup"></add-home>
-			<edit-home :is_popup="is_popup_edit" @update-is_popup="syncPopupEdit"></edit-home>
-		</div>
-	</div>
+    <div>
+    <div class="container">
+        <!--slide-->
+        <vx-card no-shadow>
+            <div class="vx-row">
+                <div class="vx-col lg:w-2/3 w-full mb-3">
+                    <swiper :options="swiperOption">
+                        <swiper-slide>
+                            <img class="responsive" src="../../../assets/images/pages/carousel/banner-16.jpg"
+                                 alt="banner">
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img class="responsive" src="../../../assets/images/pages/carousel/banner-19.jpg"
+                                 alt="banner">
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img class="responsive" src="../../../assets/images/pages/carousel/banner-5.jpg"
+                                 alt="banner">
+                        </swiper-slide>
+                        <swiper-slide>
+                            <img class="responsive" src="../../../assets/images/pages/carousel/banner-9.jpg"
+                                 alt="banner">
+                        </swiper-slide>
+                        <div class="swiper-pagination" slot="pagination"></div>
+                    </swiper>
+                </div>
+                <div class="vx-col lg:w-1/3 w-full mb-3">
+                    <!-- OVERLAY CARD -->
+                    <vx-card class="overlay-card overflow-hidden w-full">
+                        <template slot="no-body">
+                            <img src="../../../assets/images/pages/carousel/banner-16.jpg" alt="user-profile-cover"
+                                 class="responsive">
+                            <div class="card-overlay text-white flex flex-col justify-between">
+                                <h4 class="text-white mb-4">Tactic</h4>
+                                <p>Welcome to tactic</p>
+                            </div>
+                        </template>
+                    </vx-card>
+                    <vx-card class="overlay-card overflow-hidden w-full mt-2">
+                        <template slot="no-body">
+                            <img src="../../../assets/images/pages/carousel/banner-16.jpg" alt="user-profile-cover"
+                                 class="responsive">
+                            <div class="card-overlay text-white flex flex-col justify-between">
+                                <h4 class="text-white mb-4">Tactic</h4>
+                                <p>Welcome to tactic</p>
+                            </div>
+                        </template>
+                    </vx-card>
+                </div>
+            </div>
+            <!--welcome message and feature video-->
+            <div class="vx-row">
+                <div class="vx-col lg:w-1/3 w-full">
+                    <iframe class="responsive" src="https://www.youtube.com/embed/CVe3ABsiOU8" frameborder="0"
+                            allowfullscreen></iframe>
+                </div>
+                <div class="vx-col lg:w-2/3 w-full">
+                    <div class="vx-row">
+                        <div class="vx-col lg:w-3/4 w-full">
+                            <a href="#" class="text-2xl">Welcome Message</a>
+                            <p>
+                                23 Feb 2017 - Tiramisu soufflé gummies ice cream liquorice gingerbread sweet roll. Cake
+                                cotton candy candy ice cream muffin donut soufflé danish. Dessert jelly beans wafer
+                                cheesecake. Sugar plum gingerbread caramels candy canes gummi bears...
+                            </p>
+                        </div>
+                        <div class="vx-col lg:w-1/4 w-full">
+                            <img class="responsive"
+                                 src="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/search-result.94483d7a.jpg"
+                                 alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </vx-card>
+        <!--Latest News-->
+        <vx-card title="Latest News" no-shadow class="mt-3">
+            <swiper :options="swiperOptionNews">
+                <swiper-slide v-for="(item,index) in 10" :key="index">
+                    <a href="#">
+                    <img src="../../../assets/images/pages/carousel/banner-31.jpg" alt="graphic" class="responsive mb-3">
+                        <a href="#" class="mb-3 text-xl">
+                            Working fine {{index}} ...
+                        </a>
+                    </a>
+                </swiper-slide>
+
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+        </vx-card>
+        <!--Latest Video-->
+        <vx-card title="Latest Video" no-shadow class="mt-3">
+            <swiper :options="swiperOptionNews">
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-31.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-32.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-33.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-34.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-35.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-23.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-37.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-38.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-39.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-40.jpg" alt="banner">
+                </swiper-slide>
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+        </vx-card>
+        <!--Latest Gallery-->
+        <vx-card title="Latest Gallery" no-shadow class="mt-3">
+            <swiper :options="swiperOptionNews">
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-31.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-32.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-33.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-34.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-35.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-23.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-37.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-38.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-39.jpg" alt="banner">
+                </swiper-slide>
+                <swiper-slide>
+                    <img class="responsive" src="../../../assets/images/pages/carousel/banner-40.jpg" alt="banner">
+                </swiper-slide>
+                <div class="swiper-pagination" slot="pagination"></div>
+            </swiper>
+        </vx-card>
+    </div>
+        <!--Corporation-->
+        <h3>Corporations</h3>
+        <swiper class="mt-3" :options="swiperOptionCorporation">
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-31.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-32.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-33.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-34.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-35.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-23.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-37.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-38.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-39.jpg" alt="banner">
+            </swiper-slide>
+            <swiper-slide>
+                <img class="responsive" src="../../../assets/images/pages/carousel/banner-40.jpg" alt="banner">
+            </swiper-slide>
+            <div class="swiper-pagination" slot="pagination"></div>
+        </swiper>
+    </div>
 </template>
+
 <script>
-	import AddHome from "./addHome";
-	import EditHome from "./editHome";
-	import Demo from "./demo/Demo";
-	export default {
-		components: {Demo, EditHome, AddHome},
-		data() {
-			return {
-				is_popup:false,
-				is_popup_edit:false,
-				selected: [],
-				'tableList': [
-					'vs-th: Component',
-					'vs-tr: Component',
-					'vs-td: Component',
-					'thread: Slot',
-					'tbody: Slot',
-					'header: Slot'
-				],
-				users: [
-					{
-						"id": 1,
-						"name": "Leanne Graham",
-						"username": "Bret",
-						"email": "Sincere@april.biz",
-						"website": "hildegard.org",
-					},
-					{
-						"id": 2,
-						"name": "Ervin Howell",
-						"username": "Antonette",
-						"email": "Shanna@melissa.tv",
-						"website": "anastasia.net",
-					},
-					{
-						"id": 3,
-						"name": "Clementine Bauch",
-						"username": "Samantha",
-						"email": "Nathan@yesenia.net",
-						"website": "ramiro.info",
-					},
-					{
-						"id": 4,
-						"name": "Patricia Lebsack",
-						"username": "Karianne",
-						"email": "Julianne.OConner@kory.org",
-						"website": "kale.biz",
-					},
-					{
-						"id": 5,
-						"name": "Chelsey Dietrich",
-						"username": "Kamren",
-						"email": "Lucio_Hettinger@annie.ca",
-						"website": "demarco.info",
-					},
-					{
-						"id": 6,
-						"name": "Mrs. Dennis Schulist",
-						"username": "Leopoldo_Corkery",
-						"email": "Karley_Dach@jasper.info",
-						"website": "ola.org",
-					},
-					{
-						"id": 7,
-						"name": "Kurtis Weissnat",
-						"username": "Elwyn.Skiles",
-						"email": "Telly.Hoeger@billy.biz",
-						"website": "elvis.io",
-					},
-					{
-						"id": 8,
-						"name": "Nicholas Runolfsdottir V",
-						"username": "Maxime_Nienow",
-						"email": "Sherwood@rosamond.me",
-						"website": "jacynthe.com",
-					},
-					{
-						"id": 9,
-						"name": "Glenna Reichert",
-						"username": "Delphine",
-						"email": "Chaim_McDermott@dana.io",
-						"website": "conrad.com",
-					},
-					{
-						"id": 10,
-						"name": "Clementina DuBuque",
-						"username": "Moriah.Stanton",
-						"email": "Rey.Padberg@karina.biz",
-						"website": "ambrose.net",
-					},
-				],
-				data: 'Working on the mix',
-				options: {}
-			}
-		},
-		methods: {
-			syncPopup(val) {
-				this.is_popup = val
-			},
-			syncPopupEdit(val) {
-				this.is_popup_edit = val
-			}
-		}
-	}
+    import 'swiper/dist/css/swiper.min.css'
+    import {swiper, swiperSlide} from 'vue-awesome-swiper'
+
+    export default {
+        data() {
+            return {
+                swiperOption: {
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true
+                    },
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false
+                    },
+                },
+                swiperOptionNews: {
+                    slidesPerView: 3,
+                    slidesPerColumn: 1,
+                    spaceBetween: 30,
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 3,
+                            spaceBetween: 40
+                        },
+                        768: {
+                            slidesPerView: 2,
+                            spaceBetween: 30
+                        },
+                        640: {
+                            slidesPerView: 2,
+                            spaceBetween: 20
+                        }
+                    }
+                },
+                swiperOptionCorporation: {
+                    slidesPerView: 8,
+                    slidesPerColumn: 1,
+                    spaceBetween: 30,
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false
+                    },
+                    breakpoints: {
+                        1024: {
+                            slidesPerView: 6,
+                            spaceBetween: 40
+                        },
+                        768: {
+                            slidesPerView: 5,
+                            spaceBetween: 30
+                        },
+                        640: {
+                            slidesPerView: 4,
+                            spaceBetween: 20
+                        }
+                    }
+                },
+
+            }
+        },
+        components: {
+            swiper,
+            swiperSlide
+        }
+    }
 </script>
