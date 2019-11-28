@@ -6880,14 +6880,44 @@ __webpack_require__.r(__webpack_exports__);
 ==========================================================================================*/
 /* harmony default export */ __webpack_exports__["default"] = ([{
   url: "/",
-  name: "ផ្ទាំងដើម",
+  name: "Home",
   slug: "home",
   icon: "HomeIcon"
 }, {
+  url: "/about-us",
+  name: "About",
+  slug: "about-us",
+  icon: "InfoIcon"
+}, {
+  url: "/academic",
+  name: "Academic",
+  slug: "academic",
+  icon: "LinkIcon"
+}, {
+  url: "/office-center",
+  name: "Office/Center",
+  slug: "office-center",
+  icon: "LinkIcon"
+}, {
+  url: "/news",
+  name: "News",
+  slug: "news",
+  icon: "BookOpenIcon"
+}, {
+  url: "/gallery",
+  name: "Gallery",
+  slug: "gallery",
+  icon: "ImageIcon"
+}, {
+  url: "/video",
+  name: "Video",
+  slug: "video",
+  icon: "VideoIcon"
+}, {
   url: "/page2",
-  name: "Page 2",
+  name: "Contact",
   slug: "page2",
-  icon: "FileIcon"
+  icon: "PhoneCallIcon"
 }]);
 
 /***/ }),

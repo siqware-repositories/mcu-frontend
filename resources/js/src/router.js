@@ -27,6 +27,33 @@ const router = new Router({
                     component: () => import('./views/Home.vue')
                 },
                 {
+                    path: '/about-us',
+                    name: 'about-us',
+                    component: () => import('./views/about/About'),
+                    meta: {
+                        pageTitle: 'About Us',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/academic',
+                    name: 'academic',
+                    component: () => import('./views/academic/Academic'),
+                    meta: {
+                        pageTitle: 'Academic',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/office-center',
+                    name: 'office-center',
+                    component: () => import('./views/office/Office'),
+                    meta: {
+                        pageTitle: 'Office/Center',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/page2',
                     name: 'page-2',
                     component: () => import('./views/Page2.vue'),
@@ -39,6 +66,7 @@ const router = new Router({
                         rule: 'editor'
                     }
                 },
+
             ],
         },
         // =============================================================================
