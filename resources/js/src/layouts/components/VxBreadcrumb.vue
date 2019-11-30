@@ -24,7 +24,7 @@
                 <span class="breadcrumb-separator mx-2 flex items-start"><feather-icon :icon="props.isRTL ? 'ChevronsLeftIcon' : 'ChevronsRightIcon'" svgClasses="w-4 h-4" /></span>
             </li>
             <li class="inline-flex">
-                <span v-if="props.route.meta.breadcrumb.slice(-1)[0].active" class="cursor-default">{{ props.route.meta.breadcrumb.slice(-1)[0].title }}</span>
+                <span v-if="props.route.meta.breadcrumb.slice(-1)[0].active" class="cursor-default">{{ props.route.params.title?props.route.params.title:props.route.meta.breadcrumb.slice(-1)[0].title }}</span>
             </li>
         </ul>
     </div>

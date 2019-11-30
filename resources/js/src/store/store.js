@@ -15,12 +15,11 @@ import state from "./state"
 import getters from "./getters"
 import mutations from "./mutations"
 import actions from "./actions"
-
 Vue.use(Vuex);
 //Module
 import users from './modules/user'
 import about from './modules/about'
-import corporation from './modules/corporation'
+import frontend from './modules/frontend'
 export default new Vuex.Store({
     getters,
     mutations,
@@ -29,6 +28,6 @@ export default new Vuex.Store({
     modules: {
         users,
         about,
-        corporation,
+        frontend,
     }
 })

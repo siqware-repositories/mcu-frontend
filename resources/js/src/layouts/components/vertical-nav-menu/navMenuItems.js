@@ -52,9 +52,15 @@ export default [
     icon: "VideoIcon",
   },
   {
+    url: "/contact",
+    name: "Contact",
+    slug: "contact",
+    icon: "PhoneCallIcon",
+  },
+  /*{
     url: "/page2",
     name: "Contact",
     slug: "page2",
     icon: "PhoneCallIcon",
-  },
+  },*/
 ]

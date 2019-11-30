@@ -54,6 +54,70 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/news',
+                    name: 'news',
+                    component: () => import('./views/news/News'),
+                    meta: {
+                        pageTitle: 'News',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/news/:id/:title',
+                    name: 'single-news',
+                    component: () => import('./views/news/NewsIndex'),
+                    meta: {
+                        breadcrumb: [
+                            {title: 'Home', url: '/'},
+                            {title: 'News', url: '/news'},
+                            {title: 'Title', active: true},
+                        ],
+                        pageTitle: 'Title',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/gallery',
+                    name: 'gallery',
+                    component: () => import('./views/gallery/Gallery'),
+                    meta: {
+                        pageTitle: 'Gallery',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/gallery/:id/:title',
+                    name: 'single-gallery',
+                    component: () => import('./views/gallery/GalleryIndex'),
+                    meta: {
+                        breadcrumb: [
+                            {title: 'Home', url: '/'},
+                            {title: 'Gallery', url: '/gallery'},
+                            {title: 'Title', active: true},
+                        ],
+                        pageTitle: 'Title',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/video',
+                    name: 'video',
+                    component: () => import('./views/video/Video'),
+                    meta: {
+                        pageTitle: 'Video',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/contact',
+                    name: 'contact',
+                    component: () => import('./views/contact/Contact'),
+                    meta: {
+                        pageTitle: 'Contact',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/page2',
                     name: 'page-2',
                     component: () => import('./views/Page2.vue'),
