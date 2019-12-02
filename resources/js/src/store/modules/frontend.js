@@ -1,6 +1,11 @@
 import axios from  'axios'
 let config = {
-    headers: { 'Access-Control-Allow-Origin': '*' }
+    headers: {
+        'Access-Control-Allow-Origin': '*' ,
+    },
+    crossDomain:true,
+    withCredentials: true,
+    credentials: 'same-origin',
 };
 const state = {
     corporation:[],
