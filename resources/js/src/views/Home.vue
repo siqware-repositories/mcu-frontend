@@ -91,19 +91,6 @@
                     <div class="swiper-pagination" slot="pagination"></div>
                 </swiper>
             </vx-card>
-            <!--Latest Video-->
-            <vx-card title="Latest Video" no-shadow class="mt-3">
-                <swiper :options="swiperOptionVideo">
-                    <swiper-slide v-for="(item,index) in all_videos" :key="index" v-if="index<=2">
-                        <iframe class="responsive" :src="'https://www.youtube.com/embed/'+item.url"
-                                frameborder="0"></iframe>
-                        <a href="#" class="mb-3 text-xl">
-                            {{item.title}}
-                        </a>
-                    </swiper-slide>
-                    <div class="swiper-pagination" slot="pagination"></div>
-                </swiper>
-            </vx-card>
             <!--Latest Gallery-->
             <vx-card title="Latest Gallery" no-shadow class="my-3">
                 <swiper :options="swiperOptionGallery">
@@ -167,25 +154,6 @@
                     }
                 },
                 swiperOptionNews: {
-                    slidesPerView: 3,
-                    slidesPerColumn: 1,
-                    spaceBetween: 30,
-                    breakpoints: {
-                        1024: {
-                            slidesPerView: 3,
-                            spaceBetween: 40
-                        },
-                        768: {
-                            slidesPerView: 2,
-                            spaceBetween: 30
-                        },
-                        640: {
-                            slidesPerView: 1,
-                            spaceBetween: 20
-                        }
-                    }
-                },
-                swiperOptionVideo: {
                     slidesPerView: 3,
                     slidesPerColumn: 1,
                     spaceBetween: 30,
