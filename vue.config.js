@@ -9,6 +9,9 @@
 
 
 module.exports = {
-  // publicPath: '/',
-  publicPath: '/demo/vuexy-vuejs-laravel-admin-template/demo-1/',
-}
+  publicPath: '/',
+  // publicPath: '/demo/vuexy-vuejs-laravel-admin-template/demo-1/',
+  devServer: {
+    proxy: 'https://mcu.backend.siqware.app',
+  }
+};
