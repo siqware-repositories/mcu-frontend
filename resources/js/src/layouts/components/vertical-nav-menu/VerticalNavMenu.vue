@@ -31,8 +31,8 @@
 
           <!-- Logo -->
           <router-link tag="div" class="vx-logo cursor-pointer flex items-center" to="/">
-            <logo class="w-10 mr-2" />
-            <span class="vx-logo-text text-primary" v-show="isMouseEnter || !reduce" v-if="title">{{ title }}</span>
+            <logo/>
+            <!--<span class="vx-logo-text text-primary" v-show="isMouseEnter || !reduce" v-if="title">{{ title }}</span>-->
           </router-link>
           <!-- /Logo -->
 

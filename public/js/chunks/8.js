@@ -48,7 +48,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       about: 1,
       abouts: [],
       aboutFiltered: [{
-        title: null
+        title: 'working'
       }],
       is_home: true
     };

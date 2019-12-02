@@ -1,5 +1,6 @@
 <template>
-    <svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.000000 404.000000"
+    <img src="../../../../../resources/assets/images/logo/logo-mcu.png" width="180">
+    <!--<svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.000000 404.000000"
          preserveAspectRatio="xMidYMid meet">
         <metadata>
             Created by potrace 1.10, written by Peter Selinger 2001-2011
@@ -194,5 +195,5 @@
             <path d="M6448 2320 c0 -181 3 -256 7 -165 4 91 4 239 0 330 -4 91 -7 17 -7
 -165z"/>
         </g>
-    </svg>
+    </svg>-->
 </template>

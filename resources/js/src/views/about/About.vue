@@ -29,7 +29,7 @@
             return {
                 about:1,
                 abouts:[],
-                aboutFiltered:[{title:''}],
+                aboutFiltered:[{title:'working'}],
                 is_home:true
             }
         },
