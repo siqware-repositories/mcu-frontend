@@ -1,6 +1,7 @@
 import axios from  'axios'
-axios.defaults.headers.common['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers.common['Access-Control-Allow-Methods'] = 'GET,PUT,POST,DELETE,OPTIONS';
+let config = {
+    headers: { 'Access-Control-Allow-Origin': '*' }
+};
 const state = {
     corporation:[],
     news:[],
@@ -32,7 +33,7 @@ const getters = {
 const actions = {
     async fetchAoc({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-aoc');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-aoc',config);
             commit('SET_AOC',res.data)
         }catch (e) {
             return false
@@ -40,7 +41,7 @@ const actions = {
     },
     async fetchAbout({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-about');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-about',config);
             commit('SET_ABOUT',res.data)
         }catch (e) {
             return false
@@ -48,7 +49,7 @@ const actions = {
     },
     async fetchGalleries({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-gallery');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-gallery',config);
             commit('SET_GALLERY',res.data)
         }catch (e) {
             return false
@@ -56,7 +57,7 @@ const actions = {
     },
     async fetchCorporation({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-corporation');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-corporation',config);
             commit('SET_CORPORATION',res.data)
         }catch (e) {
             return false
@@ -64,7 +65,7 @@ const actions = {
     },
     async fetchNews({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-news');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-news',config);
             commit('SET_NEWS',res.data)
         }catch (e) {
             return false
@@ -72,7 +73,7 @@ const actions = {
     },
     async fetchVideos({commit}){
         try {
-            const res = await axios.get('https://mcu.backend.siqware.app/api/get-videos');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-videos',config);
             commit('SET_VIDEO',res.data)
         }catch (e) {
             return false
