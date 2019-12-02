@@ -122,7 +122,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     imagePathOnly: function imagePathOnly() {
       var self = this;
       self.galleries[0].gallery_album.forEach(function (item, index) {
-        self.images.push("http://localhost:3002".concat(item.path));
+        self.images.push("https://mcu.backend.siqware.app".concat(item.path));
       });
     }
   }

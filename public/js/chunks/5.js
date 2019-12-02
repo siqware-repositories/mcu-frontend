@@ -711,7 +711,9 @@ var render = function() {
                               _c("img", {
                                 staticClass: "responsive mb-3",
                                 attrs: {
-                                  src: "http://localhost:3002" + item.thumb,
+                                  src:
+                                    "https://mcu.backend.siqware.app" +
+                                    item.thumb,
                                   alt: "news"
                                 }
                               }),
@@ -831,7 +833,9 @@ var render = function() {
                               _c("img", {
                                 staticClass: "responsive",
                                 attrs: {
-                                  src: "http://localhost:3002" + item.thumb,
+                                  src:
+                                    "https://mcu.backend.siqware.app" +
+                                    item.thumb,
                                   alt: "gallery"
                                 }
                               }),
@@ -887,7 +891,7 @@ var render = function() {
                 _c("img", {
                   staticClass: "responsive",
                   attrs: {
-                    src: "http://localhost:3002" + corporation.path,
+                    src: "https://mcu.backend.siqware.app" + corporation.path,
                     alt: "corporation"
                   }
                 })

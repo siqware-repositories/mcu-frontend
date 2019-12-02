@@ -39,7 +39,8 @@ const actions = {
     async fetchAoc({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-aoc');
-            commit('SET_AOC',res.data)
+            const data = await res.json();
+            commit('SET_AOC',data)
         }catch (e) {
             return false
         }
@@ -47,7 +48,8 @@ const actions = {
     async fetchAbout({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-about');
-            commit('SET_ABOUT',res.data)
+            const data = await res.json();
+            commit('SET_ABOUT',data)
         }catch (e) {
             return false
         }
@@ -55,7 +57,8 @@ const actions = {
     async fetchGalleries({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-gallery');
-            commit('SET_GALLERY',res.data)
+            const data = await res.json();
+            commit('SET_GALLERY',data);
         }catch (e) {
             return false
         }
@@ -63,8 +66,8 @@ const actions = {
     async fetchCorporation({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-corporation');
-            commit('SET_CORPORATION',res.data);
-            console.log(res.data);
+            const data = await res.json();
+            commit('SET_CORPORATION',data);
         }catch (e) {
             return false
         }
@@ -72,7 +75,8 @@ const actions = {
     async fetchNews({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-news');
-            commit('SET_NEWS',res.data)
+            const data = await res.json();
+            commit('SET_NEWS',data)
         }catch (e) {
             return false
         }
@@ -80,7 +84,8 @@ const actions = {
     async fetchVideos({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-videos');
-            commit('SET_VIDEO',res.data)
+            const data = await res.json();
+            commit('SET_VIDEO',data)
         }catch (e) {
             return false
         }
