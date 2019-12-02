@@ -51,7 +51,7 @@
                 <swiper :options="swiperOptionNews">
                     <swiper-slide v-for="(item,index) in newsOnly" :key="index">
                         <router-link :to="'news/'+item.id+'/'+slugable(item.title)">
-                            <img :src="'http://localhost:3002'+item.thumb" alt="news" class="responsive mb-3">
+                            <img :src="'https://mcu.backend.siqware.app'+item.thumb" alt="news" class="responsive mb-3">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>

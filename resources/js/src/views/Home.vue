@@ -82,7 +82,7 @@
                 <swiper :options="swiperOptionNews">
                     <swiper-slide v-for="(item,index) in all_news" :key="index" v-if="index<=5">
                         <router-link :to="'news/'+item.id+'/'+slugable(item.title)">
-                            <img :src="'http://localhost:3002'+item.thumb" alt="news" class="responsive mb-3">
+                            <img :src="'https://mcu.backend.siqware.app'+item.thumb" alt="news" class="responsive mb-3">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>
@@ -109,7 +109,7 @@
                 <swiper :options="swiperOptionGallery">
                     <swiper-slide v-for="(item,index) in all_galleries" :key="index" v-if="index<=5">
                         <router-link :to="'gallery/'+item.id+'/'+slugable(item.title)">
-                            <img class="responsive" :src="'http://localhost:3002'+item.thumb" alt="gallery">
+                            <img class="responsive" :src="'https://mcu.backend.siqware.app'+item.thumb" alt="gallery">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>
@@ -122,7 +122,7 @@
             <h3>Corporations</h3>
             <swiper class="mt-3" :options="swiperOptionCorporation">
                 <swiper-slide v-for="(corporation ,index) in all_corporation.gallery_album" :key="index">
-                    <img class="responsive" :src="'http://localhost:3002'+corporation.path" alt="corporation">
+                    <img class="responsive" :src="'https://mcu.backend.siqware.app'+corporation.path" alt="corporation">
                 </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>

@@ -30,7 +30,7 @@ const getters = {
 const actions = {
     async fetchAoc({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-aoc');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-aoc');
             commit('SET_AOC',res.data)
         }catch (e) {
             return false
@@ -38,7 +38,7 @@ const actions = {
     },
     async fetchAbout({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-about');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-about');
             commit('SET_ABOUT',res.data)
         }catch (e) {
             return false
@@ -46,7 +46,7 @@ const actions = {
     },
     async fetchGalleries({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-gallery');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-gallery');
             commit('SET_GALLERY',res.data)
         }catch (e) {
             return false
@@ -54,7 +54,7 @@ const actions = {
     },
     async fetchCorporation({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-corporation');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-corporation');
             commit('SET_CORPORATION',res.data)
         }catch (e) {
             return false
@@ -62,7 +62,7 @@ const actions = {
     },
     async fetchNews({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-news');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-news');
             commit('SET_NEWS',res.data)
         }catch (e) {
             return false
@@ -70,7 +70,7 @@ const actions = {
     },
     async fetchVideos({commit}){
         try {
-            const res = await axios.get('http://localhost:3002/api/get-videos');
+            const res = await axios.get('https://mcu.backend.siqware.app/api/get-videos');
             commit('SET_VIDEO',res.data)
         }catch (e) {
             return false

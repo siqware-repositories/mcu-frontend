@@ -53,7 +53,7 @@
             imagePathOnly(){
                 let self = this;
                 self.galleries[0].gallery_album.forEach(function (item,index) {
-                    self.images.push(`http://localhost:3002${item.path}`)
+                    self.images.push(`https://mcu.backend.siqware.app${item.path}`)
                 })
             }
         }
