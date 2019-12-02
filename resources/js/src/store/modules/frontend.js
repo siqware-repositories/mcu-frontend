@@ -63,7 +63,8 @@ const actions = {
     async fetchCorporation({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-corporation');
-            commit('SET_CORPORATION',res.data)
+            commit('SET_CORPORATION',res.data);
+            console.log(res.data);
         }catch (e) {
             return false
         }
