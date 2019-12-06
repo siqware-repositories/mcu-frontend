@@ -140,19 +140,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -186,7 +173,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             spaceBetween: 30
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
           }
         }
@@ -205,26 +192,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             spaceBetween: 30
           },
           640: {
-            slidesPerView: 2,
-            spaceBetween: 20
-          }
-        }
-      },
-      swiperOptionVideo: {
-        slidesPerView: 3,
-        slidesPerColumn: 1,
-        spaceBetween: 30,
-        breakpoints: {
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 40
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30
-          },
-          640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
           }
         }
@@ -737,55 +705,6 @@ var render = function() {
                         ],
                         1
                       )
-                    : _vm._e()
-                }),
-                _vm._v(" "),
-                _c("div", {
-                  staticClass: "swiper-pagination",
-                  attrs: { slot: "pagination" },
-                  slot: "pagination"
-                })
-              ],
-              2
-            )
-          ],
-          1
-        ),
-        _vm._v(" "),
-        _c(
-          "vx-card",
-          {
-            staticClass: "mt-3",
-            attrs: { title: "Latest Video", "no-shadow": "" }
-          },
-          [
-            _c(
-              "swiper",
-              { attrs: { options: _vm.swiperOptionVideo } },
-              [
-                _vm._l(_vm.all_videos, function(item, index) {
-                  return index <= 2
-                    ? _c("swiper-slide", { key: index }, [
-                        _c("iframe", {
-                          staticClass: "responsive",
-                          attrs: {
-                            src: "https://www.youtube.com/embed/" + item.url,
-                            frameborder: "0"
-                          }
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "a",
-                          { staticClass: "mb-3 text-xl", attrs: { href: "#" } },
-                          [
-                            _vm._v(
-                              "\n                        " +
-                                _vm._s(item.title) +
-                                "\n                    "
-                            )
-                          ]
-                        )
-                      ])
                     : _vm._e()
                 }),
                 _vm._v(" "),

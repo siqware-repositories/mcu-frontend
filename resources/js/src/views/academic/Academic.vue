@@ -9,7 +9,7 @@
                     v-model="academic"
                     @input="filterAcademic(academic);filterNews(academic)"
             >
-                <vs-select-item :key="index" :value="item.name" :text="item.name" v-for="(item,index) in academicOnly" />
+                <vs-select-item :key="index" :value="item.name" :text="item.name" v-for="(item,index) in academic_only" />
             </vs-select>
         </div>
         <div class="vx-col w-full lg:w-1/4 rounded-lg">
@@ -98,7 +98,14 @@
                 academicOnly : [],
                 newsOnly : [],
                 major_index:0,
-                filteredAcademic:[{majors:[]}],
+                filteredAcademic:[{
+                    "id": 1,
+                    "name": "Faculty of Arts, Humanities , and Language",
+                    "content": "អត្ថបទ",
+                    "created_at": "2019-12-06 07:40:58",
+                    "updated_at": "2019-12-06 07:40:58",
+                    "majors": []
+                }],
                 is_home:true,
                 is_major:false,
                 is_activity:false,
@@ -111,6 +118,12 @@
             all_news(){
                 return this.$store.getters.all_news
             },
+            academic_only(){
+                let self = this;
+                return self.all_aoc.filter(function (x) {
+                    return x.majors.length
+                });
+            }
         },
         async created(){
             await this.fetchNews();

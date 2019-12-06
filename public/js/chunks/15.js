@@ -59,7 +59,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             spaceBetween: 30
           },
           640: {
-            slidesPerView: 2,
+            slidesPerView: 1,
             spaceBetween: 20
           }
         }

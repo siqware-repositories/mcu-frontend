@@ -121,7 +121,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       newsOnly: [],
       major_index: 0,
       filteredAcademic: [{
-        majors: []
+        "id": 1,
+        "name": "Faculty of Arts, Humanities , and Language",
+        "content": "អត្ថបទ",
+        "created_at": "2019-12-06 07:40:58",
+        "updated_at": "2019-12-06 07:40:58",
+        "majors": []
       }],
       is_home: true,
       is_major: false,
@@ -134,6 +139,12 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     all_news: function all_news() {
       return this.$store.getters.all_news;
+    },
+    academic_only: function academic_only() {
+      var self = this;
+      return self.all_aoc.filter(function (x) {
+        return x.majors.length;
+      });
     }
   },
   created: function () {
@@ -241,7 +252,7 @@ var render = function() {
                 expression: "academic"
               }
             },
-            _vm._l(_vm.academicOnly, function(item, index) {
+            _vm._l(_vm.academic_only, function(item, index) {
               return _c("vs-select-item", {
                 key: index,
                 attrs: { value: item.name, text: item.name }
