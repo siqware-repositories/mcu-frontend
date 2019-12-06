@@ -21,15 +21,18 @@
                         <h6>Email:</h6>
                         <p>contact@mcu.edu.kh</p>
                     </div>
-
                     <div class="mt-5">
                         <h6>Tell:</h6>
-                        <p>078 654 923</p>
+                        <p>Rector: 012 921 976</p>
+                        <p>Administration: 017 868 626</p>
+                        <p>Academic Office: 012 240 954</p>
+                        <p>International Affair: 012 696 037</p>
                     </div>
 
                     <div class="mt-5">
                         <h6>Website:</h6>
                         <p>www.mcu.edu.kh</p>
+                        <p><a href="http://www.home.mcu.edu.kh">alternative</a></p>
                     </div>
 
                     <div class="social-links flex mt-4">
