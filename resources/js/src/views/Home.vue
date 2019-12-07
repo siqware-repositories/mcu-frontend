@@ -14,14 +14,6 @@
                                 <img class="responsive" src="../../../assets/slideshow/slide-2.gif"
                                      alt="banner">
                             </swiper-slide>
-                            <swiper-slide>
-                                <img class="responsive" src="../../../assets/slideshow/slide-3.gif"
-                                     alt="banner">
-                            </swiper-slide>
-                            <swiper-slide>
-                                <img class="responsive" src="../../../assets/slideshow/slide-4.gif"
-                                     alt="banner">
-                            </swiper-slide>
                             <div class="swiper-pagination" slot="pagination"></div>
                         </swiper>
                     </div>
@@ -54,26 +46,24 @@
                         </vx-card>
                     </div>
                 </div>
-                <!--welcome message and feature video-->
+                <!--Banner-->
                 <div class="vx-row">
-                    <div class="vx-col lg:w-1/3 w-full hidden md:block">
+                    <div class="vx-col lg:w-2/3 w-full">
+                        <a href="#" class="text-2xl">{{all_banner.title}}</a>
+                        <img class="responsive rounded shadow-md"
+                             :src="all_banner.banner"
+                             alt="">
+                    </div>
+                    <div class="vx-col lg:w-1/3 w-full mt-2">
                         <iframe class="responsive" src="https://www.youtube.com/embed/CVe3ABsiOU8" frameborder="0"
                                 allowfullscreen></iframe>
-                    </div>
-                    <div class="vx-col lg:w-2/3 w-full">
-                        <div class="vx-row">
-                            <div class="vx-col lg:w-3/4 w-full">
-                                <a href="#" class="text-2xl">{{welcome_message[0].title}}</a>
-                                <p>
-                                    {{welcome_message[0].excerpt}}...
-                                </p>
-                            </div>
-                            <div class="vx-col lg:w-1/4 w-full">
-                                <img class="responsive rounded shadow-md"
-                                     src="https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/search-result.94483d7a.jpg"
-                                     alt="">
-                            </div>
-                        </div>
+                        <vs-list>
+                            <vs-list-header title="Projects"></vs-list-header>
+                            <vs-list-item v-if="index<=5" v-for="item,index in all_projects" :key="index" :title="item.project_name" :subtitle="`Funded from: ${item.project_from} Project Status: ${item.project_status}`"></vs-list-item>
+                            <vs-list-header title="Collaboration Agreement" color="success"></vs-list-header>
+                            <vs-list-item v-if="index<=5" v-for="item,index in all_collaborations" :key="index" :title="item.org_name" :subtitle="`${item.description.substring(0, 50)}`"></vs-list-item>
+
+                        </vs-list>
                     </div>
                 </div>
             </vx-card>
@@ -82,7 +72,7 @@
                 <swiper :options="swiperOptionNews">
                     <swiper-slide v-for="(item,index) in all_news" :key="index" v-if="index<=5">
                         <router-link :to="'news/'+item.id+'/'+slugable(item.title)">
-                            <img :src="'https://mcu.backend.siqware.app'+item.thumb" alt="news" class="responsive mb-3">
+                            <img :src="item.thumb" alt="news" class="responsive mb-3">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>
@@ -96,7 +86,7 @@
                 <swiper :options="swiperOptionGallery">
                     <swiper-slide v-for="(item,index) in all_galleries" :key="index" v-if="index<=5">
                         <router-link :to="'gallery/'+item.id+'/'+slugable(item.title)">
-                            <img class="responsive" :src="'https://mcu.backend.siqware.app'+item.thumb" alt="gallery">
+                            <img class="responsive" :src="item.thumb" alt="gallery">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>
@@ -109,7 +99,7 @@
             <h3>Corporations</h3>
             <swiper class="mt-3" :options="swiperOptionCorporation">
                 <swiper-slide v-for="(corporation ,index) in all_corporation.gallery_album" :key="index">
-                    <img class="responsive" :src="'https://mcu.backend.siqware.app'+corporation.path" alt="corporation">
+                    <img class="responsive" :src="corporation.path" alt="corporation">
                 </swiper-slide>
                 <div class="swiper-pagination" slot="pagination"></div>
             </swiper>
@@ -212,6 +202,15 @@
             },
             all_abouts() {
                 return this.$store.getters.all_abouts
+            },
+            all_projects() {
+                return this.$store.getters.all_project
+            },
+            all_collaborations() {
+                return this.$store.getters.all_collaboration
+            },
+            all_banner() {
+                return this.$store.getters.all_banner
             }
         },
         async created() {
@@ -220,19 +219,26 @@
             await this.fetchVideos();
             await this.fetchGalleries();
             await this.fetchAbout();
+            await this.fetchProject();
+            await this.fetchCollaboration();
+            await this.fetchBanner();
         },
         methods: {
-            filterWelcomeMessage() {
+            async fetchBanner() {
                 let self = this;
-                self.welcome_message = self.all_abouts.filter(function (x) {
-                    return x.title === "Rector's Welcome Message"
-                })
+                await self.$store.dispatch('fetchBanner');
+            },
+            async fetchCollaboration() {
+                let self = this;
+                await self.$store.dispatch('fetchCollaboration');
+            },
+            async fetchProject() {
+                let self = this;
+                await self.$store.dispatch('fetchProject');
             },
             async fetchAbout() {
                 let self = this;
-                await self.$store.dispatch('fetchAbout').then(function () {
-                    self.filterWelcomeMessage();
-                })
+                await self.$store.dispatch('fetchAbout');
             },
             async fetchGalleries() {
                 await this.$store.dispatch('fetchGalleries')

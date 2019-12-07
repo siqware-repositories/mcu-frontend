@@ -130,16 +130,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -237,6 +227,15 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     },
     all_abouts: function all_abouts() {
       return this.$store.getters.all_abouts;
+    },
+    all_projects: function all_projects() {
+      return this.$store.getters.all_project;
+    },
+    all_collaborations: function all_collaborations() {
+      return this.$store.getters.all_collaboration;
+    },
+    all_banner: function all_banner() {
+      return this.$store.getters.all_banner;
     }
   },
   created: function () {
@@ -267,6 +266,18 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               return this.fetchAbout();
 
             case 10:
+              _context.next = 12;
+              return this.fetchProject();
+
+            case 12:
+              _context.next = 14;
+              return this.fetchCollaboration();
+
+            case 14:
+              _context.next = 16;
+              return this.fetchBanner();
+
+            case 16:
             case "end":
               return _context.stop();
           }
@@ -281,14 +292,8 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     return created;
   }(),
   methods: {
-    filterWelcomeMessage: function filterWelcomeMessage() {
-      var self = this;
-      self.welcome_message = self.all_abouts.filter(function (x) {
-        return x.title === "Rector's Welcome Message";
-      });
-    },
-    fetchAbout: function () {
-      var _fetchAbout = _asyncToGenerator(
+    fetchBanner: function () {
+      var _fetchBanner = _asyncToGenerator(
       /*#__PURE__*/
       _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
         var self;
@@ -298,9 +303,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
               case 0:
                 self = this;
                 _context2.next = 3;
-                return self.$store.dispatch('fetchAbout').then(function () {
-                  self.filterWelcomeMessage();
-                });
+                return self.$store.dispatch('fetchBanner');
 
               case 3:
               case "end":
@@ -308,6 +311,87 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
             }
           }
         }, _callee2, this);
+      }));
+
+      function fetchBanner() {
+        return _fetchBanner.apply(this, arguments);
+      }
+
+      return fetchBanner;
+    }(),
+    fetchCollaboration: function () {
+      var _fetchCollaboration = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
+        var self;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+          while (1) {
+            switch (_context3.prev = _context3.next) {
+              case 0:
+                self = this;
+                _context3.next = 3;
+                return self.$store.dispatch('fetchCollaboration');
+
+              case 3:
+              case "end":
+                return _context3.stop();
+            }
+          }
+        }, _callee3, this);
+      }));
+
+      function fetchCollaboration() {
+        return _fetchCollaboration.apply(this, arguments);
+      }
+
+      return fetchCollaboration;
+    }(),
+    fetchProject: function () {
+      var _fetchProject = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
+        var self;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+          while (1) {
+            switch (_context4.prev = _context4.next) {
+              case 0:
+                self = this;
+                _context4.next = 3;
+                return self.$store.dispatch('fetchProject');
+
+              case 3:
+              case "end":
+                return _context4.stop();
+            }
+          }
+        }, _callee4, this);
+      }));
+
+      function fetchProject() {
+        return _fetchProject.apply(this, arguments);
+      }
+
+      return fetchProject;
+    }(),
+    fetchAbout: function () {
+      var _fetchAbout = _asyncToGenerator(
+      /*#__PURE__*/
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
+        var self;
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+          while (1) {
+            switch (_context5.prev = _context5.next) {
+              case 0:
+                self = this;
+                _context5.next = 3;
+                return self.$store.dispatch('fetchAbout');
+
+              case 3:
+              case "end":
+                return _context5.stop();
+            }
+          }
+        }, _callee5, this);
       }));
 
       function fetchAbout() {
@@ -319,20 +403,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     fetchGalleries: function () {
       var _fetchGalleries = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee3() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee3$(_context3) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee6() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee6$(_context6) {
           while (1) {
-            switch (_context3.prev = _context3.next) {
+            switch (_context6.prev = _context6.next) {
               case 0:
-                _context3.next = 2;
+                _context6.next = 2;
                 return this.$store.dispatch('fetchGalleries');
 
               case 2:
               case "end":
-                return _context3.stop();
+                return _context6.stop();
             }
           }
-        }, _callee3, this);
+        }, _callee6, this);
       }));
 
       function fetchGalleries() {
@@ -344,20 +428,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     fetchCorporation: function () {
       var _fetchCorporation = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee4() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee4$(_context4) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee7() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee7$(_context7) {
           while (1) {
-            switch (_context4.prev = _context4.next) {
+            switch (_context7.prev = _context7.next) {
               case 0:
-                _context4.next = 2;
+                _context7.next = 2;
                 return this.$store.dispatch('fetchCorporation');
 
               case 2:
               case "end":
-                return _context4.stop();
+                return _context7.stop();
             }
           }
-        }, _callee4, this);
+        }, _callee7, this);
       }));
 
       function fetchCorporation() {
@@ -369,20 +453,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     fetchNews: function () {
       var _fetchNews = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee5() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee5$(_context5) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee8() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee8$(_context8) {
           while (1) {
-            switch (_context5.prev = _context5.next) {
+            switch (_context8.prev = _context8.next) {
               case 0:
-                _context5.next = 2;
+                _context8.next = 2;
                 return this.$store.dispatch('fetchNews');
 
               case 2:
               case "end":
-                return _context5.stop();
+                return _context8.stop();
             }
           }
-        }, _callee5, this);
+        }, _callee8, this);
       }));
 
       function fetchNews() {
@@ -394,20 +478,20 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
     fetchVideos: function () {
       var _fetchVideos = _asyncToGenerator(
       /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee6() {
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee6$(_context6) {
+      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee9() {
+        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee9$(_context9) {
           while (1) {
-            switch (_context6.prev = _context6.next) {
+            switch (_context9.prev = _context9.next) {
               case 0:
-                _context6.next = 2;
+                _context9.next = 2;
                 return this.$store.dispatch('fetchVideos');
 
               case 2:
               case "end":
-                return _context6.stop();
+                return _context9.stop();
             }
           }
-        }, _callee6, this);
+        }, _callee9, this);
       }));
 
       function fetchVideos() {
@@ -470,26 +554,6 @@ var render = function() {
                         staticClass: "responsive",
                         attrs: {
                           src: __webpack_require__(/*! ../../../assets/slideshow/slide-2.gif */ "./resources/assets/slideshow/slide-2.gif"),
-                          alt: "banner"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("swiper-slide", [
-                      _c("img", {
-                        staticClass: "responsive",
-                        attrs: {
-                          src: __webpack_require__(/*! ../../../assets/slideshow/slide-3.gif */ "./resources/assets/slideshow/slide-3.gif"),
-                          alt: "banner"
-                        }
-                      })
-                    ]),
-                    _vm._v(" "),
-                    _c("swiper-slide", [
-                      _c("img", {
-                        staticClass: "responsive",
-                        attrs: {
-                          src: __webpack_require__(/*! ../../../assets/slideshow/slide-4.gif */ "./resources/assets/slideshow/slide-4.gif"),
                           alt: "banner"
                         }
                       })
@@ -601,9 +665,20 @@ var render = function() {
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "vx-row" }, [
+            _c("div", { staticClass: "vx-col lg:w-2/3 w-full" }, [
+              _c("a", { staticClass: "text-2xl", attrs: { href: "#" } }, [
+                _vm._v(_vm._s(_vm.all_banner.title))
+              ]),
+              _vm._v(" "),
+              _c("img", {
+                staticClass: "responsive rounded shadow-md",
+                attrs: { src: _vm.all_banner.banner, alt: "" }
+              })
+            ]),
+            _vm._v(" "),
             _c(
               "div",
-              { staticClass: "vx-col lg:w-1/3 w-full hidden md:block" },
+              { staticClass: "vx-col lg:w-1/3 w-full mt-2" },
               [
                 _c("iframe", {
                   staticClass: "responsive",
@@ -612,38 +687,53 @@ var render = function() {
                     frameborder: "0",
                     allowfullscreen: ""
                   }
-                })
-              ]
-            ),
-            _vm._v(" "),
-            _c("div", { staticClass: "vx-col lg:w-2/3 w-full" }, [
-              _c("div", { staticClass: "vx-row" }, [
-                _c("div", { staticClass: "vx-col lg:w-3/4 w-full" }, [
-                  _c("a", { staticClass: "text-2xl", attrs: { href: "#" } }, [
-                    _vm._v(_vm._s(_vm.welcome_message[0].title))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n                                " +
-                        _vm._s(_vm.welcome_message[0].excerpt) +
-                        "...\n                            "
-                    )
-                  ])
-                ]),
+                }),
                 _vm._v(" "),
-                _c("div", { staticClass: "vx-col lg:w-1/4 w-full" }, [
-                  _c("img", {
-                    staticClass: "responsive rounded shadow-md",
-                    attrs: {
-                      src:
-                        "https://pixinvent.com/demo/vuexy-vuejs-admin-dashboard-template/demo-1/img/search-result.94483d7a.jpg",
-                      alt: ""
-                    }
-                  })
-                ])
-              ])
-            ])
+                _c(
+                  "vs-list",
+                  [
+                    _c("vs-list-header", { attrs: { title: "Projects" } }),
+                    _vm._v(" "),
+                    _vm._l(_vm.all_projects, function(item, index) {
+                      return index <= 5
+                        ? _c("vs-list-item", {
+                            key: index,
+                            attrs: {
+                              title: item.project_name,
+                              subtitle:
+                                "Funded from: " +
+                                item.project_from +
+                                " Project Status: " +
+                                item.project_status
+                            }
+                          })
+                        : _vm._e()
+                    }),
+                    _vm._v(" "),
+                    _c("vs-list-header", {
+                      attrs: {
+                        title: "Collaboration Agreement",
+                        color: "success"
+                      }
+                    }),
+                    _vm._v(" "),
+                    _vm._l(_vm.all_collaborations, function(item, index) {
+                      return index <= 5
+                        ? _c("vs-list-item", {
+                            key: index,
+                            attrs: {
+                              title: item.org_name,
+                              subtitle: "" + item.description.substring(0, 50)
+                            }
+                          })
+                        : _vm._e()
+                    })
+                  ],
+                  2
+                )
+              ],
+              1
+            )
           ])
         ]),
         _vm._v(" "),
@@ -678,12 +768,7 @@ var render = function() {
                             [
                               _c("img", {
                                 staticClass: "responsive mb-3",
-                                attrs: {
-                                  src:
-                                    "https://mcu.backend.siqware.app" +
-                                    item.thumb,
-                                  alt: "news"
-                                }
+                                attrs: { src: item.thumb, alt: "news" }
                               }),
                               _vm._v(" "),
                               _c(
@@ -751,12 +836,7 @@ var render = function() {
                             [
                               _c("img", {
                                 staticClass: "responsive",
-                                attrs: {
-                                  src:
-                                    "https://mcu.backend.siqware.app" +
-                                    item.thumb,
-                                  alt: "gallery"
-                                }
+                                attrs: { src: item.thumb, alt: "gallery" }
                               }),
                               _vm._v(" "),
                               _c(
@@ -809,10 +889,7 @@ var render = function() {
               return _c("swiper-slide", { key: index }, [
                 _c("img", {
                   staticClass: "responsive",
-                  attrs: {
-                    src: "https://mcu.backend.siqware.app" + corporation.path,
-                    alt: "corporation"
-                  }
+                  attrs: { src: corporation.path, alt: "corporation" }
                 })
               ])
             }),
@@ -856,28 +933,6 @@ module.exports = "/images/slide-1.gif?31234270c2d4a095f403885419462617";
 /***/ (function(module, exports) {
 
 module.exports = "/images/slide-2.gif?43f6306b037787f14480c5d7a0393324";
-
-/***/ }),
-
-/***/ "./resources/assets/slideshow/slide-3.gif":
-/*!************************************************!*\
-  !*** ./resources/assets/slideshow/slide-3.gif ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/slide-3.gif?e93ecd3e2f24a8a0f814f1edec2b5b62";
-
-/***/ }),
-
-/***/ "./resources/assets/slideshow/slide-4.gif":
-/*!************************************************!*\
-  !*** ./resources/assets/slideshow/slide-4.gif ***!
-  \************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/images/slide-4.gif?caafed60cdc022fce4500bcfcd92ef07";
 
 /***/ }),
 

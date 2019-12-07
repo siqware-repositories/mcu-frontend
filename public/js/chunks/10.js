@@ -77,6 +77,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -190,13 +193,27 @@ var render = function() {
                   _c("div", { staticClass: "mt-5" }, [
                     _c("h6", [_vm._v("Tell:")]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("078 654 923")])
+                    _c("p", [_vm._v("Rector: 012 921 976")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Administration: 017 868 626")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("Academic Office: 012 240 954")]),
+                    _vm._v(" "),
+                    _c("p", [_vm._v("International Affair: 012 696 037")])
                   ]),
                   _vm._v(" "),
                   _c("div", { staticClass: "mt-5" }, [
                     _c("h6", [_vm._v("Website:")]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("www.mcu.edu.kh")])
+                    _c("p", [_vm._v("www.mcu.edu.kh")]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c(
+                        "a",
+                        { attrs: { href: "http://www.home.mcu.edu.kh" } },
+                        [_vm._v("alternative")]
+                      )
+                    ])
                   ]),
                   _vm._v(" "),
                   _c(

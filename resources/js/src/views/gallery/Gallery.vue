@@ -6,7 +6,7 @@
                 <swiper :options="swiperOptionGallery">
                     <swiper-slide v-for="(item,index) in all_galleries" :key="index">
                         <router-link :to="'gallery/'+item.id+'/'+slugable(item.title)">
-                            <img class="responsive" :src="'https://mcu.backend.siqware.app'+item.thumb" alt="gallery">
+                            <img class="responsive" :src="+item.thumb" alt="gallery">
                             <a href="#" class="mb-3 text-xl">
                                 {{item.title}}
                             </a>

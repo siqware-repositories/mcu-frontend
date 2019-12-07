@@ -180,11 +180,7 @@ var render = function() {
                         [
                           _c("img", {
                             staticClass: "responsive",
-                            attrs: {
-                              src:
-                                "https://mcu.backend.siqware.app" + item.thumb,
-                              alt: "gallery"
-                            }
+                            attrs: { src: +item.thumb, alt: "gallery" }
                           }),
                           _vm._v(" "),
                           _c(

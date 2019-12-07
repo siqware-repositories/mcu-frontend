@@ -1,12 +1,3 @@
-import axios from  'axios'
-let config = {
-    headers: {
-        'Access-Control-Allow-Origin': '*' ,
-    },
-    crossDomain:true,
-    withCredentials: true,
-    credentials: 'same-origin',
-};
 const state = {
     corporation:[],
     news:[],
@@ -14,8 +5,20 @@ const state = {
     galleries:[],
     abouts:[],
     aoc:[],
+    project:[],
+    collaboration:[],
+    banner:[],
 };
 const getters = {
+    all_banner:function (state) {
+        return state.banner
+    },
+    all_collaboration:function (state) {
+        return state.collaboration
+    },
+    all_project:function (state) {
+        return state.project
+    },
     all_aoc:function (state) {
         return state.aoc
     },
@@ -36,6 +39,33 @@ const getters = {
     }
 };
 const actions = {
+    async fetchBanner({commit}){
+        try {
+            const res = await fetch('https://mcu.backend.siqware.app/api/get-banner');
+            const data = await res.json();
+            commit('SET_BANNER',data)
+        }catch (e) {
+            return false
+        }
+    },
+    async fetchCollaboration({commit}){
+        try {
+            const res = await fetch('https://mcu.backend.siqware.app/api/get-collaboration');
+            const data = await res.json();
+            commit('SET_COLLABORATION',data)
+        }catch (e) {
+            return false
+        }
+    },
+    async fetchProject({commit}){
+        try {
+            const res = await fetch('https://mcu.backend.siqware.app/api/get-project');
+            const data = await res.json();
+            commit('SET_PROJECT',data)
+        }catch (e) {
+            return false
+        }
+    },
     async fetchAoc({commit}){
         try {
             const res = await fetch('https://mcu.backend.siqware.app/api/get-aoc');
@@ -92,6 +122,15 @@ const actions = {
     },
 };
 const mutations = {
+    SET_BANNER:function (state,data) {
+        state.banner = data
+    },
+    SET_COLLABORATION:function (state,data) {
+        state.collaboration = data
+    },
+    SET_PROJECT:function (state,data) {
+        state.project = data
+    },
     SET_AOC:function (state,data) {
         state.aoc = data
     },

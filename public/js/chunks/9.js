@@ -443,12 +443,7 @@ var render = function() {
                             [
                               _c("img", {
                                 staticClass: "responsive mb-3",
-                                attrs: {
-                                  src:
-                                    "https://mcu.backend.siqware.app" +
-                                    item.thumb,
-                                  alt: "news"
-                                }
+                                attrs: { src: +item.thumb, alt: "news" }
                               }),
                               _vm._v(" "),
                               _c(

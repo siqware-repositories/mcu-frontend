@@ -12,12 +12,12 @@
 <template>
 <div class="relative">
   <div class="vx-navbar-wrapper navbar-full p-0">
-    <vs-navbar class="navbar-custom navbar-skelton" :class="navbarClasses"  :style="navbarStyle" :color="navbarColor">
+    <vs-navbar class="navbar-custom navbar-skelton" :class="navbarClasses"  :style="navbarStyle" color="#4caf50">
 
       <!--<bookmarks :navbarColor="navbarColor" v-if="windowWidth >= 992" />-->
 
       <router-link tag="div" to="/" class="vx-logo cursor-pointer mx-auto flex items-center">
-        <logo/>
+        <logo class="shadow-md rounded-full pr-6 pl-2 py-1 bg-white"/>
         <!--<span class="vx-logo-text text-primary">Vuexy</span>-->
       </router-link>
 

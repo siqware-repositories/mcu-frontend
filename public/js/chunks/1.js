@@ -3840,7 +3840,7 @@ var render = function() {
             staticClass: "navbar-custom navbar-skelton",
             class: _vm.navbarClasses,
             style: _vm.navbarStyle,
-            attrs: { color: _vm.navbarColor }
+            attrs: { color: "#4caf50" }
           },
           [
             _c(
@@ -3849,7 +3849,11 @@ var render = function() {
                 staticClass: "vx-logo cursor-pointer mx-auto flex items-center",
                 attrs: { tag: "div", to: "/" }
               },
-              [_c("logo")],
+              [
+                _c("logo", {
+                  staticClass: "shadow-md rounded-full pr-6 pl-2 py-1 bg-white"
+                })
+              ],
               1
             ),
             _vm._v(" "),
@@ -6796,7 +6800,7 @@ __webpack_require__.r(__webpack_exports__);
   icon: "InfoIcon"
 }, {
   url: "/academic",
-  name: "Academic",
+  name: "Academic Programs",
   slug: "academic",
   icon: "LinkIcon"
 }, {
@@ -6805,8 +6809,27 @@ __webpack_require__.r(__webpack_exports__);
   slug: "office-center",
   icon: "LinkIcon"
 }, {
+  header: "International Affairs",
+  icon: "GlobeIcon",
+  items: [{
+    url: "/apps/email",
+    name: "Projects",
+    slug: "project",
+    icon: "LayersIcon"
+  }, {
+    url: "/apps/email",
+    name: "Collaboration Agreement",
+    slug: "collaboration-agreement",
+    icon: "StarIcon"
+  }]
+}, {
   url: "/news",
-  name: "News",
+  name: "Library",
+  slug: "library",
+  icon: "BookIcon"
+}, {
+  url: "/news",
+  name: "Information",
   slug: "news",
   icon: "BookOpenIcon"
 }, {
