@@ -6812,18 +6812,18 @@ __webpack_require__.r(__webpack_exports__);
   header: "International Affairs",
   icon: "GlobeIcon",
   items: [{
-    url: "/apps/email",
+    url: "/project",
     name: "Projects",
     slug: "project",
     icon: "LayersIcon"
   }, {
-    url: "/apps/email",
+    url: "/collaboration",
     name: "Collaboration Agreement",
     slug: "collaboration-agreement",
     icon: "StarIcon"
   }]
 }, {
-  url: "/news",
+  url: "/library",
   name: "Library",
   slug: "library",
   icon: "BookIcon"

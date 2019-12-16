@@ -59,10 +59,9 @@
                                 allowfullscreen></iframe>
                         <vs-list>
                             <vs-list-header title="Projects"></vs-list-header>
-                            <vs-list-item v-if="index<=5" v-for="item,index in all_projects" :key="index" :title="item.project_name" :subtitle="`Funded from: ${item.project_from} Project Status: ${item.project_status}`"></vs-list-item>
+                            <vs-list-item v-if="index<=5" v-for="item,index in all_projects" :key="index+5" :title="item.project_name" :subtitle="`Funded from: ${item.project_from} Project Status: ${item.project_status}`"></vs-list-item>
                             <vs-list-header title="Collaboration Agreement" color="success"></vs-list-header>
                             <vs-list-item v-if="index<=5" v-for="item,index in all_collaborations" :key="index" :title="item.org_name" :subtitle="`${item.description.substring(0, 50)}`"></vs-list-item>
-
                         </vs-list>
                     </div>
                 </div>

@@ -129,7 +129,6 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 //
 //
 //
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -697,7 +696,7 @@ var render = function() {
                     _vm._l(_vm.all_projects, function(item, index) {
                       return index <= 5
                         ? _c("vs-list-item", {
-                            key: index,
+                            key: index + 5,
                             attrs: {
                               title: item.project_name,
                               subtitle:

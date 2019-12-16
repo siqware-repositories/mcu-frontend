@@ -86,6 +86,33 @@ const router = new Router({
                     }
                 },
                 {
+                    path: '/project',
+                    name: 'project',
+                    component: () => import('./views/international-affair/Project'),
+                    meta: {
+                        pageTitle: 'Projects',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/collaboration',
+                    name: 'collaboration',
+                    component: () => import('./views/international-affair/Collaboration'),
+                    meta: {
+                        pageTitle: 'Collaboration Agreements',
+                        rule: 'editor'
+                    }
+                },
+                {
+                    path: '/library',
+                    name: 'library',
+                    component: () => import('./views/library/Library'),
+                    meta: {
+                        pageTitle: 'Library',
+                        rule: 'editor'
+                    }
+                },
+                {
                     path: '/gallery/:id/:title',
                     name: 'single-gallery',
                     component: () => import('./views/gallery/GalleryIndex'),

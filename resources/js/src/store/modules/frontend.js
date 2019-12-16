@@ -41,7 +41,7 @@ const getters = {
 const actions = {
     async fetchBanner({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-banner');
+            const res = await fetch('https://mcu.siqware.com/api/get-banner');
             const data = await res.json();
             commit('SET_BANNER',data)
         }catch (e) {
@@ -50,7 +50,7 @@ const actions = {
     },
     async fetchCollaboration({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-collaboration');
+            const res = await fetch('https://mcu.siqware.com/api/get-collaboration');
             const data = await res.json();
             commit('SET_COLLABORATION',data)
         }catch (e) {
@@ -59,7 +59,7 @@ const actions = {
     },
     async fetchProject({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-project');
+            const res = await fetch('https://mcu.siqware.com/api/get-project');
             const data = await res.json();
             commit('SET_PROJECT',data)
         }catch (e) {
@@ -68,7 +68,7 @@ const actions = {
     },
     async fetchAoc({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-aoc');
+            const res = await fetch('https://mcu.siqware.com/api/get-aoc');
             const data = await res.json();
             commit('SET_AOC',data)
         }catch (e) {
@@ -77,7 +77,7 @@ const actions = {
     },
     async fetchAbout({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-about');
+            const res = await fetch('https://mcu.siqware.com/api/get-about');
             const data = await res.json();
             commit('SET_ABOUT',data)
         }catch (e) {
@@ -86,7 +86,7 @@ const actions = {
     },
     async fetchGalleries({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-gallery');
+            const res = await fetch('https://mcu.siqware.com/api/get-gallery');
             const data = await res.json();
             commit('SET_GALLERY',data);
         }catch (e) {
@@ -95,7 +95,7 @@ const actions = {
     },
     async fetchCorporation({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-corporation');
+            const res = await fetch('https://mcu.siqware.com/api/get-corporation');
             const data = await res.json();
             commit('SET_CORPORATION',data);
         }catch (e) {
@@ -104,7 +104,7 @@ const actions = {
     },
     async fetchNews({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-news');
+            const res = await fetch('https://mcu.siqware.com/api/get-news');
             const data = await res.json();
             commit('SET_NEWS',data)
         }catch (e) {
@@ -113,7 +113,7 @@ const actions = {
     },
     async fetchVideos({commit}){
         try {
-            const res = await fetch('https://mcu.backend.siqware.app/api/get-videos');
+            const res = await fetch('https://mcu.siqware.com/api/get-videos');
             const data = await res.json();
             commit('SET_VIDEO',data)
         }catch (e) {
