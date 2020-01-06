@@ -12,7 +12,7 @@
                         Tuek Thla Commune <br>
                         Serei Saophoan City <br>
                         Banteay Meanchey Province <br>
-                        01252 <br>
+                        Postal Code: 01252 <br>
                         Cambodia
                     </div>
                 </div>
@@ -32,7 +32,6 @@
                     <div class="mt-5">
                         <h6>Website:</h6>
                         <p>www.mcu.edu.kh</p>
-                        <p><a href="http://www.home.mcu.edu.kh">alternative</a></p>
                     </div>
 
                     <div class="social-links flex mt-4">

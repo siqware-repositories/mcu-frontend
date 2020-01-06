@@ -180,7 +180,7 @@ var render = function() {
                         [
                           _c("img", {
                             staticClass: "responsive",
-                            attrs: { src: +item.thumb, alt: "gallery" }
+                            attrs: { src: item.thumb, alt: "gallery" }
                           }),
                           _vm._v(" "),
                           _c(

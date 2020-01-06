@@ -5,7 +5,7 @@
             <vx-card title="Latest Video">
                 <swiper :options="swiperOptionVideo">
                     <swiper-slide v-for="(item,index) in all_videos" :key="index">
-                        <iframe class="responsive" :src="'https://www.youtube.com/embed/'+item.url" frameborder="0"></iframe>
+                        <iframe class="responsive" :src="'https://www.youtube.com/embed/'+item.url" frameborder="0" allowfullscreen></iframe>
                         <a href="#" class="mb-3 text-xl">
                             {{item.title}}
                         </a>

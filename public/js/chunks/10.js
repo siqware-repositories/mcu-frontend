@@ -79,7 +79,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -177,7 +176,7 @@ var render = function() {
                     _c("br"),
                     _vm._v("\n                    Banteay Meanchey Province "),
                     _c("br"),
-                    _vm._v("\n                    01252 "),
+                    _vm._v("\n                    Postal Code: 01252 "),
                     _c("br"),
                     _vm._v("\n                    Cambodia\n                ")
                   ])
@@ -205,15 +204,7 @@ var render = function() {
                   _c("div", { staticClass: "mt-5" }, [
                     _c("h6", [_vm._v("Website:")]),
                     _vm._v(" "),
-                    _c("p", [_vm._v("www.mcu.edu.kh")]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c(
-                        "a",
-                        { attrs: { href: "http://www.home.mcu.edu.kh" } },
-                        [_vm._v("alternative")]
-                      )
-                    ])
+                    _c("p", [_vm._v("www.mcu.edu.kh")])
                   ]),
                   _vm._v(" "),
                   _c(
