@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>SiqWare App</title>
+    <title>Mean Chey University</title>
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css?family=Battambang&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset(mix('css/main.css')) }}">
@@ -21,7 +21,7 @@
     <div id="app">
     </div>
     @routes
-    {{--<script src="{{asset('js/app.js')}}"></script>--}}
-    <script src="{{ asset(mix('js/app.js')) }}"></script>
+    <script src="{{asset('js/app.js')}}"></script>
+    {{--<script src="{{ asset(mix('js/app.js')) }}"></script>--}}
   </body>
 </html>
