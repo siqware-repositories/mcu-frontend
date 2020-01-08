@@ -237,7 +237,7 @@ var render = function() {
             "vs-select",
             {
               staticClass: "w-full",
-              attrs: { autocomplete: "", label: "Select About Us" },
+              attrs: { autocomplete: "", label: "Select Faculty" },
               on: {
                 input: function($event) {
                   _vm.filterAcademic(_vm.academic)

@@ -5,7 +5,7 @@
             <vs-select
                     autocomplete
                     class="w-full"
-                    label="Select About Us"
+                    label="Select Faculty"
                     v-model="academic"
                     @input="filterAcademic(academic);filterNews(academic)"
             >
