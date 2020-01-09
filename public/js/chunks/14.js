@@ -46,6 +46,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "Library"
 });
@@ -68,61 +69,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("vx-card", { attrs: { "no-radius": "", "no-shadow": "" } }, [
-    _c("div", { staticClass: "vx-row" }, [
-      _c(
-        "div",
-        { staticClass: "vx-col w-full lg:w-1/4 rounded-lg" },
-        [
-          _c("vx-card", [
-            _c("ul", { staticClass: "faq-topics mt-4" }, [
-              _c(
-                "li",
-                {
-                  staticClass: "p-2 font-medium flex items-center",
-                  on: { click: function($event) {} }
-                },
-                [
-                  _c("div", {
-                    staticClass: "h-3 w-3 rounded-full mr-2 bg-danger-gradient"
-                  }),
-                  _c("span", { staticClass: "cursor-pointer" }, [
-                    _vm._v("Home")
-                  ])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                {
-                  staticClass: "p-2 font-medium flex items-center",
-                  on: { click: function($event) {} }
-                },
-                [
-                  _c("div", {
-                    staticClass: "h-3 w-3 rounded-full mr-2 bg-success"
-                  }),
-                  _c("span", { staticClass: "cursor-pointer" }, [
-                    _vm._v("Activities")
-                  ])
-                ]
-              )
-            ])
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "vx-col w-full lg:w-3/4 mt-12 md:mt-0" },
-        [
-          _vm.is_home ? _c("vx-card") : _vm._e(),
-          _vm._v(" "),
-          _c("vx-card", { attrs: { title: "Activities" } })
-        ],
-        1
-      )
-    ])
+    _c("h3", [_vm._v("Coming !")])
   ])
 }
 var staticRenderFns = []

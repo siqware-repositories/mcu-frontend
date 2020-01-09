@@ -78,7 +78,7 @@
                         }
                     }
                 },
-                office:'ICT',
+                office:'Research and Development Office',
                 officeOnly : [],
                 newsOnly : [],
                 major_index:0,
@@ -118,13 +118,13 @@
                     return x.majors.length===0
                 });
                 self.filteredOffice = self.officeOnly.filter(function (x) {
-                    return x.name === name
+                    return x.name === String(name)
                 });
             },
             filterNews(name){
                 let self = this;
                 self.newsOnly = self.all_news.filter(function (x) {
-                    return x.category === name;
+                    return x.category === String(name);
                 });
             },
             majorIndex(index){

@@ -9,7 +9,7 @@
                         v-model="about"
                         @input="filterAbout(about)"
                 >
-                    <vs-select-item :key="index" :value="item.id" :text="item.title" v-for="(item,index) in all_abouts" />
+                    <vs-select-item :key="index" :value="item.title" :text="item.title" v-for="(item,index) in all_abouts" />
                 </vs-select>
             </div>
             <!-- FAQ COL -->
@@ -27,9 +27,9 @@
         name: "About",
         data() {
             return {
-                about:1,
+                about:'Founder',
                 abouts:[],
-                aboutFiltered:[{title:'working'}],
+                aboutFiltered:[{title:'Research and Development'}],
                 is_home:true
             }
         },
@@ -48,10 +48,10 @@
                     self.filterAbout(self.about)
                 })
             },
-            filterAbout(id){
+            filterAbout(title){
                 let self = this;
                 self.aboutFiltered = self.all_abouts.filter(function (x) {
-                    return x.id === id
+                    return x.title === title
                 });
             }
         }

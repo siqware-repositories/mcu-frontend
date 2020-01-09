@@ -4621,7 +4621,7 @@ var render = function() {
               inputClassses:
                 "w-full vs-input-no-border vs-input-no-shdow-focus",
               icon: "SearchIcon",
-              placeholder: "Explore Vuexy..."
+              placeholder: "Search..."
             },
             on: {
               input: _vm.hnd_search_query_update,

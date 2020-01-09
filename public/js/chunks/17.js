@@ -100,7 +100,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }
       },
-      office: 'ICT',
+      office: 'Research and Development Office',
       officeOnly: [],
       newsOnly: [],
       major_index: 0,
@@ -167,13 +167,13 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         return x.majors.length === 0;
       });
       self.filteredOffice = self.officeOnly.filter(function (x) {
-        return x.name === name;
+        return x.name === String(name);
       });
     },
     filterNews: function filterNews(name) {
       var self = this;
       self.newsOnly = self.all_news.filter(function (x) {
-        return x.category === name;
+        return x.category === String(name);
       });
     },
     majorIndex: function majorIndex(index) {

@@ -116,7 +116,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
           }
         }
       },
-      academic: 'Faculty of Science and Technology',
+      academic: 'Faculty of Arts, Humanities, and Language',
       academicOnly: [],
       newsOnly: [],
       major_index: 0,

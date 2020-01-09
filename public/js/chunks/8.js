@@ -45,10 +45,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
   name: "About",
   data: function data() {
     return {
-      about: 1,
+      about: 'Founder',
       abouts: [],
       aboutFiltered: [{
-        title: 'working'
+        title: 'Research and Development'
       }],
       is_home: true
     };
@@ -90,10 +90,10 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
         self.filterAbout(self.about);
       });
     },
-    filterAbout: function filterAbout(id) {
+    filterAbout: function filterAbout(title) {
       var self = this;
       self.aboutFiltered = self.all_abouts.filter(function (x) {
-        return x.id === id;
+        return x.title === title;
       });
     }
   }
@@ -143,7 +143,7 @@ var render = function() {
             _vm._l(_vm.all_abouts, function(item, index) {
               return _c("vs-select-item", {
                 key: index,
-                attrs: { value: item.id, text: item.title }
+                attrs: { value: item.title, text: item.title }
               })
             }),
             1
