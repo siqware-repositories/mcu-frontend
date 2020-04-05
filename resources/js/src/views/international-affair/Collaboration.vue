@@ -11,7 +11,7 @@
             <template slot-scope="{data}">
                 <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
                     <vs-td :data="data[indextr].logo">
-                        <img :src="tr.logo" :alt="tr.logo" height="150">
+                        <img :src="tr.logo" :alt="tr.logo" height="150" @click="openUrl(data[indextr].url)">
                     </vs-td>
                     <vs-td :data="data[indextr].org_name">
                         {{ data[indextr].org_name }}
@@ -44,6 +44,10 @@
         methods:{
             async fetchCollaboration(){
                 await this.$store.dispatch('fetchCollaboration')
+            },
+            openUrl(url){
+                var win = window.open(url, '_blank');
+                win.focus();
             }
         }
     }

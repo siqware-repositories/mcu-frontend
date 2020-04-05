@@ -11,12 +11,12 @@
             </template>
 
             <template slot-scope="{data}">
-                <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data">
+                <vs-tr :data="tr" :key="indextr" v-for="(tr, indextr) in data" @click="openUrl(tr.url)">
                     <vs-td :data="data[indextr].project_name">
                         {{ data[indextr].project_name }}
                     </vs-td>
                     <vs-td :data="data[indextr].logo">
-                        <img :src="tr.logo" :alt="tr.logo" height="150">
+                        <img :src="tr.logo" :alt="tr.logo" height="150" @click="openUrl(data[indextr].url)">
                     </vs-td>
                     <vs-td :data="data[indextr].project_from">
                         {{ data[indextr].project_from }}
@@ -52,6 +52,10 @@
         methods:{
             async fetchProject(){
                 await this.$store.dispatch('fetchProject')
+            },
+            openUrl(url){
+                var win = window.open(url, '_blank');
+                win.focus();
             }
         }
     }

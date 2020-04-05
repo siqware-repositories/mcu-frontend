@@ -82,7 +82,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return fetchCollaboration;
-    }()
+    }(),
+    openUrl: function openUrl(url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
   }
 });
 
@@ -128,7 +132,12 @@ var render = function() {
                     [
                       _c("vs-td", { attrs: { data: data[indextr].logo } }, [
                         _c("img", {
-                          attrs: { src: tr.logo, alt: tr.logo, height: "150" }
+                          attrs: { src: tr.logo, alt: tr.logo, height: "150" },
+                          on: {
+                            click: function($event) {
+                              return _vm.openUrl(data[indextr].url)
+                            }
+                          }
                         })
                       ]),
                       _vm._v(" "),

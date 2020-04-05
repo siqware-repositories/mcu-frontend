@@ -90,7 +90,11 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
       }
 
       return fetchProject;
-    }()
+    }(),
+    openUrl: function openUrl(url) {
+      var win = window.open(url, '_blank');
+      win.focus();
+    }
   }
 });
 
@@ -132,7 +136,15 @@ var render = function() {
                 return _vm._l(data, function(tr, indextr) {
                   return _c(
                     "vs-tr",
-                    { key: indextr, attrs: { data: tr } },
+                    {
+                      key: indextr,
+                      attrs: { data: tr },
+                      on: {
+                        click: function($event) {
+                          return _vm.openUrl(tr.url)
+                        }
+                      }
+                    },
                     [
                       _c(
                         "vs-td",
@@ -148,7 +160,12 @@ var render = function() {
                       _vm._v(" "),
                       _c("vs-td", { attrs: { data: data[indextr].logo } }, [
                         _c("img", {
-                          attrs: { src: tr.logo, alt: tr.logo, height: "150" }
+                          attrs: { src: tr.logo, alt: tr.logo, height: "150" },
+                          on: {
+                            click: function($event) {
+                              return _vm.openUrl(data[indextr].url)
+                            }
+                          }
                         })
                       ]),
                       _vm._v(" "),
